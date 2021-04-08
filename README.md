@@ -31,6 +31,7 @@ Oh yes:
 
 - [Aragon client](https://github.com/aragon/aragon)
 - [Aragon's Court Dashboard](https://github.com/aragon/court-dashboard)
+- [Eleven Finance BigFoot](https://bigfoot.eleven.finance/dashboard) ([GitHub](https://github.com/Eleven-Finance/bigfoot-app))
 - _(Your project!)_
 
 ## Usage
@@ -49,7 +50,7 @@ Use it in your React app:
 import React from 'react'
 import { render } from 'react-dom'
 import bsc from '@binance-chain/bsc-use-wallet'
-import { UseWalletProvider } from 'use-wallet'
+import { useWallet, UseWalletProvider } from '@binance-chain/bsc-use-wallet'
 
 function App() {
   const wallet = useWallet()
@@ -144,5 +145,7 @@ It returns an object representing the connected account (“wallet”), containi
 - `type`: whether or not the account is a contract. Can be `null` when you're disconnected, or either `"contract"` or `"normal"`.
 
 ## Special thanks
+
+This is a fork from [useWallet()](https://github.com/aragon/use-wallet/).
 
 useWallet() is a built on [web3-react](https://github.com/NoahZinsmeister/web3-react) and its connectors, which are doing all the hard work internally.
